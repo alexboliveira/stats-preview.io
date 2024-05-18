@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:wght@100&display=swap');
+
+/*Weights: 400, 700*/
+.inter{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:wght@100&display=swap');
+
+/*Weights: 400*/
+.lexend-deca{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+
+
+
+
+
+
+
+:root{
+    --corPrimaria: hsl(233, 47%, 7%);  /*main background*/
+    --corPrimaria2: hsl(244, 38%, 16%); /* card background*/
+    --corPrimaria3: hsl(277, 64%, 61%);  /*accent*/
+    
+    --corNeutra1: hsl(0, 0%, 100%);  /*White (main heading, stats):*/
+    --corNeutra2: hsla(0, 0%, 100%, 0.75); /* (main paragraph):*/
+    --corNeutra3: hsla(0, 0%, 100%, 0.6); /*(stat headings)*/
+    --corNeutra4: hsl(0, 0%, 8%);
+
+    --font: 15px;  /*paragrafo*/
+}
+*{ 
+    margin:0;
+    padding: 0;
+    /*mobile 375px  | Desktop 1440   |  screen siza 320px */
+    font-size: var(--font);
+    max-width: 100%;
+    max-height: 100%;
+}
+main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--corPrimaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article{
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--corPrimaria2);
+    border-radius: 18px;
+    align-items: center; 
+    margin: var(--font);
+    overflow: hidden;  /*usar para ativar a borda da imagem*/
+    
+}
+@media (min-width: 1160px) {
+    /*acima de 1160px o codigo abaixo é executado*/
+
+    main{
+        height: 100vh;
+    }
+    article{
+        flex-direction: row-reverse;
+        max-width: auto !important;
+        width: 80%;
+        max-width: 1440px;
+
+    }
+    article > div{
+        flex: 1;  /*deixa as div com mesmo tamanho*/
+    }
+
+
+  
+    article div picture > img{
+        width: 100%;
+        filter: opacity(0.5);
+    }
+
+    article  > div:nth-of-type(2){
+        display: flex;
+        
+        justify-content: center;
+    }
+
+    article  > div:nth-of-type(2)  div{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+    article h1{
+        padding: 0;
+        margin: 0;
+        text-align: left !important;
+
+    }
+
+    article div > p{
+        text-align: justify !important;
+
+
+    }
+
+    article div div ul{
+        margin-top: calc(var(--font) * 4) !important;
+        flex-direction: row !important;
+        gap: 0 !important;
+
+    }
+    article div div ul li{
+        text-align: justify !important;
+    }
+
+    article div div ul li p{
+        font-size: calc(var(--font)  * 2) !important;
+    }
+
+
+
+}  /*fim media query   +++++++++++++++++++++++++++++++++++++++*/
+
+
+article > div:nth-of-type(1){
+    background-color: var(--corPrimaria3);
+
+}
+
+article div picture{
+    width: 100%;
+    height: 100%;
+}
+
+article div picture img{
+    opacity: 0.5;
+    display: flex;
+    /*se a imagem não tiver display: flex ela fica com um espaço vazio estranho*/
+    
+}
+
+
+
+
+article h1{
+    text-align: center;
+    font-weight: 700;
+    color: var(--corNeutra1);
+    padding: var(--font);
+    font-size: calc(var(--font) * 1.6);
+}
+article h1 > span{
+    font-size: calc(var(--font) * 1.6);
+    font-weight: 700;
+    color: var(--corPrimaria3);
+
+}
+
+article div > p{
+    padding: var(--font);
+    color: var(--corNeutra3);
+    text-align:center;
+    font-weight: 400;
+}
+
+article div div ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: calc(var(--font) * 1);
+    margin-bottom: calc(var(--font) * 1) !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(var(--font) * 2);
+    padding: var(--font);
+    
+}
+article div div ul li{
+    list-style-type: none;
+    text-align: center;
+}
+
+article div div ul li p{
+    color: var(--corNeutra1);
+    font-weight: 700;
+    font-size: calc(var(--font)  * 1.6);
+}
+
+article div div ul li span{
+    color: var(--corNeutra3);
+}
+
+article div div{
+    margin: calc(var(--font) * 2);
+
+}
+
+
+
+
+
+
+
